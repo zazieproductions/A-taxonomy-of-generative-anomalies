@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zazieproductions.github.io/A-taxonomy-of-generative-anomalies/schemas/corpus-v1.schema.json",
+  "title": "Archive of Generative Deviance normalized corpus",
+  "description": "Version 1 normalized ACS Research Infrastructure Workbench exports. Unknown source configuration fields are retained for forward compatibility.",
+  "type": "object",
+  "required": ["schema_version", "record_type", "source_exports", "experiments", "generations", "deduplication"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "record_type": {"const": "acs-workbench-corpus"},
+    "source_exports": {"type": "array", "items": {"$ref": "#/$defs/sourceExport"}},
+    "experiments": {"type": "array", "items": {"$ref": "#/$defs/experiment"}},
+    "generations": {"type": "array", "items": {"$ref": "#/$defs/generation"}},
+    "deduplication": {"$ref": "#/$defs/deduplication"}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "nullableString": {"type": ["string", "null"]},
+    "sourceExport": {
+      "type": "object",
+      "required": ["source_file", "source_sha256", "bytes", "object_index", "run_rows_in_export"],
+      "properties": {
+        "source_file": {"type": "string", "minLength": 1},
+        "source_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "bytes": {"type": "integer", "minimum": 0},
+        "object_index": {"type": "integer", "minimum": 0},
+        "experiment_id": {"$ref": "#/$defs/nullableString"},
+        "title": {"$ref": "#/$defs/nullableString"},
+        "created_at": {"type": ["string", "null"]},
+        "updated_at": {"type": ["string", "null"]},
+        "last_mode": {"type": ["string", "null"]},
+        "run_rows_in_export": {"type": "integer", "minimum": 0},
+        "snapshots_in_export": {"type": ["integer", "null"], "minimum": 0},
+        "compare_snapshots_in_export": {"type": ["integer", "null"], "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "experiment": {
+      "type": "object",
+      "required": ["experiment_id", "title", "source_files", "metadata_versions"],
+      "properties": {
+        "experiment_id": {"type": "string", "minLength": 1},
+        "title": {"type": ["string", "null"]},
+        "source_files": {"type": "array", "items": {"type": "string"}},
+        "metadata_versions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["source_file", "source_sha256", "metadata"],
+            "properties": {
+              "source_file": {"type": "string"},
+              "source_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+              "export_updated_at": {"type": ["string", "null"]},
+              "metadata": {"type": "object"}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "timestampPair": {
+      "type": "object",
+      "required": ["started_at", "ended_at"],
+      "properties": {
+        "started_at": {"type": ["string", "null"]},
+        "ended_at": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "tokenCounts": {
+      "type": "object",
+      "required": ["prompt", "completion", "source"],
+      "properties": {
+        "prompt": {"type": ["integer", "null"], "minimum": 0},
+        "completion": {"type": ["integer", "null"], "minimum": 0},
+        "source": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "logprobCandidate": {
+      "type": "object",
+      "required": ["token", "logprob"],
+      "properties": {
+        "token": {"type": "string"},
+        "logprob": {"type": "number"}
+      },
+      "additionalProperties": true
+    },
+    "logprobToken": {
+      "type": "object",
+      "required": ["token", "logprob", "top"],
+      "properties": {
+        "token": {"type": "string"},
+        "logprob": {"type": "number"},
+        "top": {"type": ["array", "null"], "items": {"$ref": "#/$defs/logprobCandidate"}}
+      },
+      "additionalProperties": true
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source_file", "source_sha256", "experiment_id", "object_index", "run_index", "source_record_sha256"],
+      "properties": {
+        "source_file": {"type": "string", "minLength": 1},
+        "source_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "experiment_id": {"type": ["string", "null"]},
+        "object_index": {"type": "integer", "minimum": 0},
+        "run_index": {"type": "integer", "minimum": 0},
+        "export_updated_at": {"type": ["string", "null"]},
+        "source_record_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "generation": {
+      "type": "object",
+      "required": ["generation_id", "experiment_id", "experiment_title", "model", "model_identifier", "wrapper_model_id", "prompt", "configured_prompt", "completion", "status", "finalized", "source_field_presence", "timestamps", "tokens", "sampling", "generation_config", "logprobs", "finish_reason", "stop_reason", "error_message", "comparison_run_id", "source_provenance"],
+      "properties": {
+        "generation_id": {"type": "string", "minLength": 1},
+        "experiment_id": {"type": ["string", "null"]},
+        "experiment_title": {"type": ["string", "null"]},
+        "model": {"$ref": "#/$defs/nullableString"},
+        "model_identifier": {"$ref": "#/$defs/nullableString"},
+        "wrapper_model_id": {"$ref": "#/$defs/nullableString"},
+        "prompt": {"$ref": "#/$defs/nullableString"},
+        "configured_prompt": {"$ref": "#/$defs/nullableString"},
+        "completion": {"$ref": "#/$defs/nullableString"},
+        "status": {"$ref": "#/$defs/nullableString"},
+        "finalized": {"type": ["boolean", "null"]},
+        "source_field_presence": {"type": "object", "additionalProperties": {"type": "boolean"}},
+        "timestamps": {"$ref": "#/$defs/timestampPair"},
+        "tokens": {"$ref": "#/$defs/tokenCounts"},
+        "sampling": {"type": "object", "description": "Recorded generation configuration excluding prompt and model identifiers; fields absent in the source stay absent."},
+        "generation_config": {"type": "object", "description": "Exact source generation_config object."},
+        "logprobs": {"type": ["array", "null"], "items": {"$ref": "#/$defs/logprobToken"}},
+        "finish_reason": {"$ref": "#/$defs/nullableString"},
+        "stop_reason": {"$ref": "#/$defs/nullableString"},
+        "error_message": {"$ref": "#/$defs/nullableString"},
+        "comparison_run_id": {"$ref": "#/$defs/nullableString"},
+        "source_provenance": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/provenance"}}
+      },
+      "additionalProperties": false
+    },
+    "deduplication": {
+      "type": "object",
+      "required": ["key", "source_run_rows", "unique_generation_count", "duplicate_rows_removed", "duplicate_generation_ids", "conflicts", "history_policy"],
+      "properties": {
+        "key": {"type": "string"},
+        "source_run_rows": {"type": "integer", "minimum": 0},
+        "unique_generation_count": {"type": "integer", "minimum": 0},
+        "duplicate_rows_removed": {"type": "integer", "minimum": 0},
+        "duplicate_generation_ids": {"type": "array", "items": {"type": "string"}},
+        "conflicts": {"type": "array", "items": {"type": "object"}},
+        "history_policy": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

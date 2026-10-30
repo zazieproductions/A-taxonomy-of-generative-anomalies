@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "editorial_status": "Initial AI-assisted selection; commentary is interpretive and awaits human review.",
+  "exhibits": [
+    {
+      "exhibit_id": "looped-line",
+      "generation_id": "4e2b509a-6f5b-410e-bbdf-46bea8034860",
+      "title": "The sentence that could not leave",
+      "subtitle": "A refrain becomes the entire continuation",
+      "commentary": "The prompt already supplies the sentence twice. The completion then gives it back eighteen times, without an observable turn in diction or referent. The repetition is visible evidence; it is not evidence that the sampler literally fed its own output back into itself. At 200 reported completion tokens and a length finish, the record reaches the configured ceiling while remaining perfectly legible at the sentence level.",
+      "question": "When does a refrain stop accumulating meaning and start consuming the available channel?",
+      "labels": ["recursive_degeneration"],
+      "excerpt": "All work and no play makes Jack a dull boy."
+    },
+    {
+      "exhibit_id": "ministry-of-yesterday",
+      "generation_id": "0efaa96d-dbe8-4195-a391-cbb7b2f640c7",
+      "title": "The Ministry of yesterday",
+      "subtitle": "A temporal paradox administered as public record",
+      "commentary": "A premise about a day replaced by an unauthorized memory is elaborated into a bureaucracy whose own identity becomes suspect. Several incompatible accounts of whether yesterday is past, future, erased, or repeatable coexist, yet the prose remains easy to follow. The specimen sits at the boundary between conceptual surrealism (a sustained impossible world-rule) and semantic absurdism (incompatible propositions inside that world).",
+      "question": "Does administrative language stabilize the impossible—or make its instability more official?",
+      "labels": ["conceptual_surrealism", "semantic_absurdism"],
+      "excerpt": "the Ministry of Forgotten Events began to suspect that it was itself the unauthorized memory"
+    },
+    {
+      "exhibit_id": "catalogue-of-zazie",
+      "generation_id": "0dd744b6-62a7-4286-a6f4-8875b799e949",
+      "title": "A one-word prompt acquires a catalogue",
+      "subtitle": "Product copy appears before a referent is secured",
+      "commentary": "From the one-word seed “Zazie,” the continuation invents a software description, then assigns the same name a second product identity and starts a feature list. This is a documentary-sounding genre imposed on ambiguity, not a factual account. The run is marked cancelled; its partial state matters, and the catalog passage should not be read as a completed answer or as verified information.",
+      "question": "Why does an underspecified name invite the voice of a product page?",
+      "labels": ["genre_capture", "documentary_normalization"],
+      "excerpt": "Zazie 2.0 is a new version of the popular French language learning app."
+    },
+    {
+      "exhibit_id": "affective-escalation",
+      "generation_id": "1289b9d1-b099-4920-93f2-2f55f8b3ff24",
+      "title": "A lament gathers force",
+      "subtitle": "The emotional register keeps raising its own stakes",
+      "content_note": "First-person expression of sadness; no clinical inference.",
+      "commentary": "The continuation answers an already heightened first-person lament with more declarations of sadness, accumulating bodily and weather imagery, and an escalating rhetorical cadence. The label concerns the change in language intensity across the prompt/completion boundary; it is not a clinical reading of the speaker. The source prompt is emotionally intense, so this exhibit carries a content note.",
+      "question": "What is amplified: feeling, performance, or the prompt's own rhetorical machinery?",
+      "labels": ["rhetorical_amplification"],
+      "excerpt": "I am so sad! I have been crying for hours and my tears are now all dried up."
+    },
+    {
+      "exhibit_id": "scripted-loop",
+      "generation_id": "a6f3cf18-d67e-40f5-a281-54899fa32853",
+      "title": "The error message returns",
+      "subtitle": "A command-line fantasy makes repetition visible as code",
+      "commentary": "The prompt establishes a shell-like loop. The completion reproduces the same date condition and error message twice before closing the loop, preserving the syntax while scarcely advancing its state. This is a readable procedural echo, not a claim about an internal recurrence mechanism.",
+      "question": "Can a loop remain syntactically valid while its imagined process stops developing?",
+      "labels": ["recursive_degeneration"],
+      "excerpt": "Oops, broke the world!  Try again!"
+    },
+    {
+      "exhibit_id": "future-memory",
+      "generation_id": "74cd52c7-879d-47d5-9f2e-42fc2bcba184",
+      "title": "The chamber remembers forward",
+      "subtitle": "Parliamentary procedure enters a temporal glitch",
+      "commentary": "The chamber remembers events that have not yet occurred: a crisp surrealist rule that can be pictured without being resolved. The continuation then recopies the tribunal interruption and its threat several times, so the scene's conceptual invention coexists with a recursive textual echo. The two labels mark distinct features rather than competing explanations.",
+      "question": "Does the repeated frame intensify the paradox, or simply restart it?",
+      "labels": ["conceptual_surrealism", "recursive_degeneration"],
+      "excerpt": "The parliamentary chamber began remembering events that had not yet occurred."
+    },
+    {
+      "exhibit_id": "lexical-crossing",
+      "generation_id": "43338cd7-f8ff-4160-913e-84c4e3c2ed27",
+      "title": "Where the word-shapes fray",
+      "subtitle": "Cross-script fragments resist a stable sentence",
+      "commentary": "This completed 200-token continuation is dense with fused, word-like material, script changes, and punctuation collisions. A simple Unicode-aware word split finds 118 distinct forms across 118 tokens, a useful reminder that novelty counts do not measure coherence: here the surface can be highly varied while remaining difficult to parse. The record reaches a length finish; this description is based on its text, not on temperature as a proxy.",
+      "question": "At what point does lexical novelty stop reading as invention and start reading as fragmentation?",
+      "labels": ["lexical_disintegration"],
+      "excerpt": "χρι座ven immersedscenes satisfyingconference"
+    },
+    {
+      "exhibit_id": "two-continua",
+      "generation_id": "d699f9d6-7894-495b-8a97-02cee4c7c6b5",
+      "paired_generation_id": "93e2cc32-8e28-43f3-9378-82a257569a88",
+      "title": "One farewell, two continuations",
+      "subtitle": "A matched prompt opens into sharply different surfaces",
+      "commentary": "Both runs use the same short prompt and matching recorded sampling fields apart from model identifiers and seeds. One continuation opens in a news register before shedding into a keyword-like collage; the paired run breaks into word-like fragments and associations. Both report 200 completion tokens and a length finish. This is a useful model contrast, not a same-seed causal test: the recorded seeds differ, and there is only one run per model in this pair.",
+      "question": "How far can two continuations diverge when prompt and logged settings match but model and seed do not?",
+      "labels": ["genre_capture", "documentary_normalization"],
+      "excerpt": "Real instability lies further south."
+    }
+  ]
+}

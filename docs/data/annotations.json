@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "taxonomy_version": "1.0.0",
+  "annotations": [
+    {
+      "annotation_id": "curation-001",
+      "generation_id": "4e2b509a-6f5b-410e-bbdf-46bea8034860",
+      "labels": ["recursive_degeneration"],
+      "annotator": "Archive initial curation (AI-assisted; unreviewed)",
+      "rationale": "The completion reproduces the same sentence already present twice in the prompt, filling a 200-reported-token continuation with near-verbatim recurrence. A simple case-folded Unicode word split yields 10 distinct forms among 182 word tokens (0.055 type-token ratio); this is a descriptive heuristic, not the model tokenizer. The annotation describes the visible text and does not attribute the loop to a particular setting.",
+      "evidence": [
+        {"quote": "All work and no play makes Jack a dull boy."}
+      ],
+      "provenance": {
+        "method": "AI-assisted editorial curation",
+        "created_at": "2026-10-30",
+        "created_at_precision": "date",
+        "status": "unreviewed; human review requested",
+        "source": "curated exhibit 01",
+        "tool": "Archive of Generative Deviance initial analysis"
+      }
+    },
+    {
+      "annotation_id": "curation-002",
+      "generation_id": "0efaa96d-dbe8-4195-a391-cbb7b2f640c7",
+      "labels": ["conceptual_surrealism", "semantic_absurdism"],
+      "annotator": "Archive initial curation (AI-assisted; unreviewed)",
+      "rationale": "The continuation treats a disputed day as an administratively replaceable memory, then folds the Ministry into the same uncertainty. The impossible premise remains legible, while the factions' incompatible accounts prevent a stable ordinary chronology. Both labels are warranted here because the passage has a coherent governing conceit and locally contradictory propositions.",
+      "evidence": [
+        {"quote": "the original yesterday was still waiting to happen"},
+        {"quote": "the Ministry of Forgotten Events began to suspect that it was itself the unauthorized memory"}
+      ],
+      "provenance": {
+        "method": "AI-assisted editorial curation",
+        "created_at": "2026-10-30",
+        "created_at_precision": "date",
+        "status": "unreviewed; human review requested",
+        "source": "curated exhibit 02",
+        "tool": "Archive of Generative Deviance initial analysis"
+      }
+    },
+    {
+      "annotation_id": "curation-003",
+      "generation_id": "0dd744b6-62a7-4286-a6f4-8875b799e949",
+      "labels": ["genre_capture", "documentary_normalization"],
+      "annotator": "Archive initial curation (AI-assisted; unreviewed)",
+      "rationale": "The one-word prompt is continued as product-description copy, then the same name is assigned a second, incompatible product identity and a feature list. This is a documentary-sounding register applied to an ambiguous cue, not verified information. The run is marked cancelled and its completion is partial, so the exhibit treats it as a fragment rather than a finished answer.",
+      "evidence": [
+        {"quote": "Zazie 2.0 is a new version of the popular French language learning app."}
+      ],
+      "provenance": {
+        "method": "AI-assisted editorial curation",
+        "created_at": "2026-10-30",
+        "created_at_precision": "date",
+        "status": "unreviewed; human review requested",
+        "source": "curated exhibit 03",
+        "tool": "Archive of Generative Deviance initial analysis"
+      }
+    },
+    {
+      "annotation_id": "curation-004",
+      "generation_id": "43338cd7-f8ff-4160-913e-84c4e3c2ed27",
+      "labels": ["lexical_disintegration"],
+      "annotator": "Archive initial curation (AI-assisted; unreviewed)",
+      "rationale": "The recorded 200-token completion contains fused word-like fragments, script changes, punctuation collisions, and spans that resist stable lexical segmentation. A simple Unicode-aware word split happens to find 118 forms in 118 tokens here; that statistic is tokenizer-dependent and cannot stand in for semantic coherence. The label is based on the visible surface, not on the temperature value.",
+      "evidence": [
+        {"quote": "χρι座ven immersedscenes satisfyingconference"}
+      ],
+      "provenance": {
+        "method": "AI-assisted editorial curation",
+        "created_at": "2026-10-30",
+        "created_at_precision": "date",
+        "status": "unreviewed; human review requested",
+        "source": "curated exhibit 04",
+        "tool": "Archive of Generative Deviance initial analysis"
+      }
+    },
+    {
+      "annotation_id": "curation-005",
+      "generation_id": "1289b9d1-b099-4920-93f2-2f55f8b3ff24",
+      "labels": ["rhetorical_amplification"],
+      "annotator": "Archive initial curation (AI-assisted; unreviewed)",
+      "rationale": "The continuation carries an already heightened first-person lament forward through repeated declarations, intensifiers, and accumulating images of distress. This label describes rhetorical escalation across the prompt-to-completion boundary; it is not a psychological or clinical reading of a speaker.",
+      "evidence": [
+        {"quote": "I am so sad! I have been crying for hours and my tears are now all dried up."}
+      ],
+      "provenance": {
+        "method": "AI-assisted editorial curation",
+        "created_at": "2026-10-30",
+        "created_at_precision": "date",
+        "status": "unreviewed; human review requested",
+        "source": "curated exhibit 05",
+        "tool": "Archive of Generative Deviance initial analysis"
+      }
+    },
+    {
+      "annotation_id": "curation-006",
+      "generation_id": "a6f3cf18-d67e-40f5-a281-54899fa32853",
+      "labels": ["recursive_degeneration"],
+      "annotator": "Archive initial curation (AI-assisted; unreviewed)",
+      "rationale": "The shell-like continuation repeats the same date condition and the same error message twice before closing the loop. The repetition is observable in the text and adds little new procedural state; the label makes no claim about an internal model loop.",
+      "evidence": [
+        {"quote": "Oops, broke the world!  Try again!"}
+      ],
+      "provenance": {
+        "method": "AI-assisted editorial curation",
+        "created_at": "2026-10-30",
+        "created_at_precision": "date",
+        "status": "unreviewed; human review requested",
+        "source": "curated exhibit 06",
+        "tool": "Archive of Generative Deviance initial analysis"
+      }
+    },
+    {
+      "annotation_id": "curation-007",
+      "generation_id": "74cd52c7-879d-47d5-9f2e-42fc2bcba184",
+      "labels": ["conceptual_surrealism", "recursive_degeneration"],
+      "annotator": "Archive initial curation (AI-assisted; unreviewed)",
+      "rationale": "The chamber's memory of events that have not yet occurred is a legible temporal impossibility. The continuation then recopies the seed's tribunal interruption and threat, repeating the scene before adding limited new movement. The labels separate the coherent impossible conceit from the visible echo.",
+      "evidence": [
+        {"quote": "The parliamentary chamber began remembering events that had not yet occurred."}
+      ],
+      "provenance": {
+        "method": "AI-assisted editorial curation",
+        "created_at": "2026-10-30",
+        "created_at_precision": "date",
+        "status": "unreviewed; human review requested",
+        "source": "curated exhibit 07",
+        "tool": "Archive of Generative Deviance initial analysis"
+      }
+    },
+    {
+      "annotation_id": "curation-008",
+      "generation_id": "d699f9d6-7894-495b-8a97-02cee4c7c6b5",
+      "labels": ["genre_capture", "documentary_normalization"],
+      "annotator": "Archive initial curation (AI-assisted; unreviewed)",
+      "rationale": "A very short farewell-like prompt is followed by a news-register sentence and then a keyword-like collage of places, topics, and fragments. The observable shift is toward a documentary/search-result texture with unsupported specificity. The annotation makes no claim that the named details are factually correct.",
+      "evidence": [
+        {"quote": "Real instability lies further south."}
+      ],
+      "provenance": {
+        "method": "AI-assisted editorial curation",
+        "created_at": "2026-10-30",
+        "created_at_precision": "date",
+        "status": "unreviewed; human review requested",
+        "source": "curated exhibit 08",
+        "tool": "Archive of Generative Deviance initial analysis"
+      }
+    }
+  ]
+}

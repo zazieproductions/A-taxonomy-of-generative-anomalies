@@ -1,0 +1,84 @@
+name: Validate archive and publish Atlas
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Test and validate research data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Check static Atlas JavaScript syntax
+        run: node --check docs/app.js
+      - name: Re-ingest source exports into a temporary corpus
+        run: python -m anomaly_archive ingest . --source-root . --output /tmp/corpus.json
+      - name: Validate corpus and annotation references
+        run: >-
+          python -m anomaly_archive validate /tmp/corpus.json
+          --annotations docs/data/annotations.json
+          --taxonomy docs/data/taxonomy.json
+      - name: Exercise the public projection
+        run: python -m anomaly_archive publish --corpus /tmp/corpus.json --output /tmp/atlas.json
+      - name: Print reproducible corpus summary
+        run: python -m anomaly_archive stats /tmp/corpus.json
+
+  publish:
+    name: Deploy GitHub Pages
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Rebuild canonical corpus from raw exports
+        run: python -m anomaly_archive ingest . --source-root . --output data/normalized/corpus.json
+      - name: Validate corpus and annotations
+        run: >-
+          python -m anomaly_archive validate data/normalized/corpus.json
+          --annotations docs/data/annotations.json
+          --taxonomy docs/data/taxonomy.json
+      - name: Publish redacted Atlas payload
+        run: >-
+          python -m anomaly_archive publish
+          --corpus data/normalized/corpus.json
+          --output docs/data/atlas.json
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
