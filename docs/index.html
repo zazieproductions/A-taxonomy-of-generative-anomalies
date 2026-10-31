@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0e0c">
+  <meta name="description" content="An experimental literary archive and research atlas for generative language-model anomalies.">
+  <title>Anomaly Atlas — Archive of Generative Deviance</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the archive</a>
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="Archive of Generative Deviance, home">
+      <span class="brand-mark">AG<span class="brand-mark-dot">·</span>D</span>
+      <span class="brand-name">Archive of<br>Generative Deviance</span>
+    </a>
+    <div class="masthead-index"><span class="live-dot"></span> RESEARCH ARCHIVE <span class="slash">/</span> ACS RIWB</div>
+    <nav aria-label="Main navigation">
+      <a href="#gallery">Specimens</a>
+      <a href="#comparisons">Comparisons</a>
+      <a href="#exhibits">Exhibits</a>
+      <a href="#methods">Methods</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span>FIELD ARCHIVE</span><span class="eyebrow-rule"></span><span>SNAPSHOT / 30 OCT 2026</span></p>
+        <h1>When language<br>leaves the <em>rails.</em></h1>
+        <p class="hero-deck">A working archive of experimental base-model generations: where prompt, sampler, and model meet repetition, genre drift, impossible worlds, and lexical failure.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#gallery">Enter the specimen register <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#methods">How this archive reads <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-side" aria-label="Archive status">
+        <div class="orbit-label">CATALOGUE<br><strong>01—∞</strong></div>
+        <div class="hero-stamp"><span>OBSERVE</span><span>DON’T</span><span>OVERCLAIM</span></div>
+        <p class="hero-side-note">No generated folklore.<br>Only what the export records.</p>
+      </div>
+      <div class="hero-footer"><span>01 / 03 — RESEARCH INFRASTRUCTURE</span><span>OPEN CORPUS · VERSIONED SOURCES · MANUAL LABELS</span></div>
+    </section>
+
+    <section class="notice section-wrap" aria-label="Content and privacy notice">
+      <div class="notice-mark">!</div>
+      <div>
+        <p class="notice-title">Content + privacy note</p>
+        <p id="privacy-notice">Some source prompts contain sensitive or distressing material and structured identifiers. The public Atlas masks common patterns where detected, but the mask is not a privacy guarantee. Raw exports and the canonical corpus remain unchanged; review permissions and sensitive content before public distribution.</p>
+      </div>
+      <span class="notice-code">READ FIRST / 00</span>
+    </section>
+
+    <section class="metrics-strip section-wrap" aria-label="Corpus summary">
+      <div class="metric-card"><span class="metric-label">UNIQUE GENERATIONS</span><strong id="stat-generations">—</strong><span class="metric-foot">stable Workbench run IDs</span></div>
+      <div class="metric-card"><span class="metric-label">EXPERIMENTS</span><strong id="stat-experiments">—</strong><span class="metric-foot">distinct Workbench IDs</span></div>
+      <div class="metric-card"><span class="metric-label">COMPLETED / CANCELLED</span><strong id="stat-status">—</strong><span class="metric-foot">status kept as recorded</span></div>
+      <div class="metric-card"><span class="metric-label">TOKEN LOGPROB TRACES</span><strong id="stat-logprobs">—</strong><span class="metric-foot">where present and publishable</span></div>
+    </section>
+
+    <section class="section-wrap archive-section" id="gallery">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span>01 / INDEX</span><span class="eyebrow-rule"></span><span>SEARCH THE RUNS</span></p>
+          <h2>Specimen register</h2>
+          <p class="section-intro">Each card is one original Workbench run ID. Partial and cancelled generations stay in the archive.</p>
+        </div>
+        <div class="result-readout"><span id="visible-count">Loading archive…</span><span class="readout-line"></span><span class="readout-label">FILTERED VIEW</span></div>
+      </div>
+
+      <form class="filter-panel" id="filters">
+        <label class="filter-search">Search prompt, completion, or run ID
+          <input id="search" type="search" placeholder="e.g. Yesterday, repeated line, run ID…" autocomplete="off">
+        </label>
+        <label>Run status
+          <select id="status-filter"><option value="">All statuses</option></select>
+        </label>
+        <label>Model
+          <select id="model-filter"><option value="">All models</option></select>
+        </label>
+        <label>Experiment
+          <select id="experiment-filter"><option value="">All experiments</option></select>
+        </label>
+        <label>Taxonomy label
+          <select id="label-filter"><option value="">All labels</option></select>
+        </label>
+        <label>Temperature ≥
+          <input id="temp-min" type="number" step="any" inputmode="decimal" placeholder="—">
+        </label>
+        <label>Temperature ≤
+          <input id="temp-max" type="number" step="any" inputmode="decimal" placeholder="—">
+        </label>
+        <label>Top P
+          <select id="top-p-filter"><option value="">Any recorded value</option></select>
+        </label>
+        <label>Top K
+          <select id="top-k-filter"><option value="">Any recorded value</option></select>
+        </label>
+        <label>Min P
+          <select id="min-p-filter"><option value="">Any recorded value</option></select>
+        </label>
+        <label>Sort
+          <select id="sort-filter">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="temperature">Temperature · high to low</option>
+            <option value="completion">Longest completion first</option>
+          </select>
+        </label>
+        <button class="button button-quiet filter-reset" id="reset-filters" type="button">Reset filters <span aria-hidden="true">↺</span></button>
+      </form>
+
+      <div class="gallery-grid" id="gallery-grid" aria-live="polite" aria-busy="true">
+        <div class="loading-card">Reading the export ledger…</div>
+      </div>
+      <div class="gallery-end">
+        <button class="button button-quiet" id="load-more" type="button" hidden>Load more specimens <span aria-hidden="true">＋</span></button>
+        <p>Prompts and completions are display-masked on a best-effort basis. Open a specimen for recorded fields and source provenance.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap comparison-section" id="comparisons">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span>02 / CONTROLLED LOOK</span><span class="eyebrow-rule"></span><span>PROMPT-MATCHED PAIRS</span></p>
+          <h2>Two models, one prompt.</h2>
+          <p class="section-intro">Pairs match exact prompt and recorded non-model configuration within an experiment. Seeds differ in every pair; this is not a same-seed benchmark.</p>
+        </div>
+        <div class="pair-count"><strong id="pair-count">—</strong><span>matched pairs<br>in this snapshot</span></div>
+      </div>
+      <div class="compare-toolbar">
+        <label for="pair-select">Select a matched pair</label>
+        <select id="pair-select"><option value="">Loading pairs…</option></select>
+        <span class="compare-caveat">MODEL + SEED VARY <span aria-hidden="true">/</span> OTHER RECORDED SETTINGS MATCH</span>
+      </div>
+      <div class="comparison-grid" id="comparison-grid" aria-live="polite">
+        <div class="loading-card">Building matched pairs…</div>
+      </div>
+    </section>
+
+    <section class="analysis-section">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span>03 / DESCRIPTIVE INSTRUMENTS</span><span class="eyebrow-rule"></span><span>NO FITTED TRENDLINE</span></p>
+            <h2>Read the surface.</h2>
+            <p class="section-intro">Visual summaries of recorded runs. These are diagnostic views, not causal estimates or quality scores.</p>
+          </div>
+        </div>
+        <div class="analysis-grid">
+          <article class="chart-panel">
+            <div class="chart-head"><div><span class="chart-index">A</span><h3>Temperature / lexical variety</h3></div><span class="chart-unit">LOG SCALE × / RATIO Y</span></div>
+            <p class="chart-note">Case-folded Unicode word forms per completion. Circle size tracks word count; it is not the model tokenizer. Ratio is length-sensitive; privacy-masked completions are omitted.</p>
+            <div class="svg-frame"><svg id="lexical-chart" viewBox="0 0 760 330" role="img" aria-label="Scatterplot of temperature and a simple lexical variety ratio"></svg></div>
+            <div class="legend-row" id="lexical-legend"></div>
+          </article>
+          <article class="chart-panel">
+            <div class="chart-head"><div><span class="chart-index">B</span><h3>Run chronology</h3></div><span class="chart-unit">UTC · RUN START</span></div>
+            <p class="chart-note">Each mark is a deduplicated run. Shape denotes completion status; model color distinguishes run-level aliases. Select a mark to open its record.</p>
+            <label class="chart-select-label" for="timeline-experiment">Experiment view</label>
+            <select class="timeline-select" id="timeline-experiment"></select>
+            <div class="svg-frame"><svg id="timeline-chart" viewBox="0 0 760 330" role="img" aria-label="Interactive timeline of generation runs"></svg></div>
+            <div class="legend-row" id="timeline-legend"></div>
+          </article>
+        </div>
+        <div class="distribution-panel">
+          <div><p class="eyebrow"><span>CORPUS BALANCE</span><span class="eyebrow-rule"></span></p><h3>What made it into the ledger?</h3><p class="chart-note">Counts are by unique original run ID—not by repeated export appearance.</p></div>
+          <div id="status-distribution" class="status-distribution"></div>
+        </div>
+        <div class="probability-callout">
+          <div class="probability-glyph" aria-hidden="true">−log p<br><span>→</span></div>
+          <div><p class="eyebrow"><span>TOKEN-LEVEL VIEW</span></p><h3>Probability traces, when they exist.</h3><p>Open any specimen with a recorded logprob array to inspect the chosen token, its reported log probability, and the export’s recorded alternatives. Values remain in log-probability form; alternatives are not renormalized. Some traces are suppressed in the public projection when structured identifiers are detected.</p></div>
+          <a class="text-link" href="#gallery">Find specimens <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap exhibits-section" id="exhibits">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span>04 / EDITORIAL SELECTION</span><span class="eyebrow-rule"></span><span>READINGS, NOT GROUND TRUTH</span></p>
+          <h2>Selected disturbances.</h2>
+          <p class="section-intro">Curated specimens with critical commentary. Labels are plural, provisional, and tied to visible evidence.</p>
+        </div>
+        <span class="editorial-status" id="editorial-status">INITIAL EDITORIAL PASS</span>
+      </div>
+      <div class="exhibit-grid" id="exhibit-grid"></div>
+    </section>
+
+    <section class="taxonomy-section" id="taxonomy">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span>05 / WORKING TAXONOMY</span><span class="eyebrow-rule"></span><span>NON-EXCLUSIVE LABELS</span></p>
+            <h2>Seven ways a text can tilt.</h2>
+            <p class="section-intro">Labels describe observable textual features; they do not assign causes to temperature, Top P, or a model.</p>
+          </div>
+          <a class="text-link" href="./data/taxonomy.json">Taxonomy JSON <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="taxonomy-grid" id="taxonomy-grid"></div>
+      </div>
+    </section>
+
+    <section class="section-wrap methods-section" id="methods">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span>06 / PROVENANCE</span><span class="eyebrow-rule"></span><span>WHAT WE KNOW / WHAT WE DON’T</span></p>
+          <h2>Keep the record honest.</h2>
+          <p class="section-intro">The source files are preserved as supplied. Normalization creates a stable index; it does not turn missing values into defaults or cancelled runs into completed ones.</p>
+        </div>
+      </div>
+      <div class="methods-grid">
+        <article class="method-card"><span class="method-number">01</span><h3>Stable ID, not text hash</h3><p>Deduplication uses the original Workbench run ID. Duplicate appearances remain in provenance; conflicting versions would be reported rather than silently collapsed.</p></article>
+        <article class="method-card"><span class="method-number">02</span><h3>Export history is not a new run</h3><p>Snapshot and compare-lane counts are recorded in the source manifest. Run arrays are authoritative for generation counts; a compare lane with a known run ID is not counted twice.</p></article>
+        <article class="method-card"><span class="method-number">03</span><h3>Recorded values stay recorded</h3><p>Prompts, model identifiers, sampling settings, timestamps, status, reported token counts, finish reasons, and available logprobs are retained. Absent fields remain absent; administrative API key IDs are not copied into normalized records.</p></article>
+        <article class="method-card"><span class="method-number">04</span><h3>Masking is a view, not a rewrite</h3><p>The canonical corpus is separate from this public projection. Common structured identifiers are masked in displayed text; the regex cannot guarantee privacy and the source data needs human review.</p></article>
+      </div>
+      <div class="notebook-links">
+        <div><p class="eyebrow"><span>RESEARCH NOTEBOOKS</span></p><h3>Two experiment IDs. Three export snapshots.</h3><p>The identity and repetition files share one Workbench experiment ID; the pipeline treats them as successive snapshots.</p></div>
+        <div class="notebook-link-list">
+          <a href="https://github.com/zazieproductions/A-taxonomy-of-generative-anomalies/blob/main/docs/research-notebooks/01-identity-and-repetition.md"><span>01</span> Identity, repetition, and continuation drift <b aria-hidden="true">↗</b></a>
+          <a href="https://github.com/zazieproductions/A-taxonomy-of-generative-anomalies/blob/main/docs/research-notebooks/02-extreme-sampling-genre-capture.md"><span>02</span> Extreme sampling and genre capture <b aria-hidden="true">↗</b></a>
+          <a href="https://github.com/zazieproductions/A-taxonomy-of-generative-anomalies/blob/main/docs/corpus-analysis.md"><span>03</span> Cross-experiment synthesis <b aria-hidden="true">↗</b></a>
+          <a href="https://github.com/zazieproductions/A-taxonomy-of-generative-anomalies/blob/main/docs/data-model.md"><span>04</span> Data model and provenance <b aria-hidden="true">↗</b></a>
+          <a href="https://github.com/zazieproductions/A-taxonomy-of-generative-anomalies/blob/main/docs/taxonomy-and-annotation.md"><span>05</span> Taxonomy and annotation protocol <b aria-hidden="true">↗</b></a>
+          <a href="./data/atlas.json" download><span>↓</span> Download public Atlas projection <b aria-hidden="true">JSON</b></a>
+        </div>
+      </div>
+      <div class="annotation-workbench" id="annotation-workbench">
+        <div><p class="eyebrow"><span>LOCAL ANNOTATION WORKBENCH</span></p><h3>Make a label. Keep its trail.</h3><p>Open a specimen to add multiple labels, evidence, a rationale, and your annotator identity. New annotations stay in this browser until exported; download the bundle to review and commit it to the repository.</p></div>
+        <div class="annotation-status"><span class="status-ring"></span><span id="local-annotation-count">0 local annotations</span><button class="button button-quiet" id="export-annotations" type="button">Export annotations <span aria-hidden="true">↓</span></button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-wrap">
+    <a class="brand" href="#top"><span class="brand-mark">AG<span class="brand-mark-dot">·</span>D</span><span class="brand-name">Archive of<br>Generative Deviance</span></a>
+    <p>ANOMALY ATLAS <span>/</span> SNAPSHOT 2026.10<br><small>Observe closely. Interpret lightly.</small></p>
+    <a class="text-link" href="https://github.com/zazieproductions/A-taxonomy-of-generative-anomalies">Repository <span aria-hidden="true">↗</span></a>
+  </footer>
+
+  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title">
+    <div class="dialog-top"><span class="eyebrow">SPECIMEN / <span id="dialog-index">—</span></span><button class="dialog-close" type="button" aria-label="Close specimen">×</button></div>
+    <div id="detail-content"></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

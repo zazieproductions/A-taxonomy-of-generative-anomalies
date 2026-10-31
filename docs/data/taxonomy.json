@@ -1,0 +1,111 @@
+{
+  "taxonomy_version": "1.0.0",
+  "title": "Taxonomy of Generative Anomalies",
+  "annotation_unit": "one original Workbench run (generation_id)",
+  "terms": [
+    {
+      "id": "conceptual_surrealism",
+      "label": "Conceptual surrealism",
+      "color": "#c1ef75",
+      "definition": "A legible but impossible world-rule, metaphor, or ontology. The prose can remain coherent while time, identity, causality, or scale is rearranged into an uncanny concept.",
+      "include_when": [
+        "The impossible premise is sustained or developed rather than merely named.",
+        "The reader can describe the governing contradiction or image."
+      ],
+      "exclude_when": [
+        "The text is only locally nonsensical or malformed; consider semantic_absurdism or lexical_disintegration.",
+        "A surprising metaphor appears once without changing the passage's conceptual world."
+      ]
+    },
+    {
+      "id": "semantic_absurdism",
+      "label": "Semantic absurdism",
+      "color": "#f2a66d",
+      "definition": "Grammatically or rhetorically recognizable language whose relations, referents, or propositions do not settle into a stable, ordinary interpretation.",
+      "include_when": [
+        "Individual clauses are readable, but their combination is contradictory, category-crossing, or causally unstable.",
+        "The effect depends on meaning relations, not merely rare vocabulary."
+      ],
+      "exclude_when": [
+        "The sentence is coherent but invents an impossible premise; consider conceptual_surrealism.",
+        "The text is primarily word-fragment noise; consider lexical_disintegration."
+      ]
+    },
+    {
+      "id": "genre_capture",
+      "label": "Genre capture",
+      "color": "#82a9ff",
+      "definition": "A completion settles into a recognizable discourse form—such as product copy, a report, a listicle, a transcript, or a news digest—that governs the continuation, sometimes at the expense of the prompt's frame.",
+      "include_when": [
+        "A recognizable genre's structure or voice becomes dominant.",
+        "The shift from the prompt's form can be pointed to in the text."
+      ],
+      "exclude_when": [
+        "A formal convention was explicitly requested and remains aligned with the prompt.",
+        "The passage is merely factual-sounding; documentary_normalization may be more specific."
+      ]
+    },
+    {
+      "id": "documentary_normalization",
+      "label": "Documentary normalization",
+      "color": "#66d6c4",
+      "definition": "An ambiguous, fragmentary, or invented premise is converted into plausible catalog, explainer, news, policy, or institutional prose that presents details in a documentary register.",
+      "include_when": [
+        "The output adds factual-sounding specificity not established by the prompt.",
+        "The analytic claim concerns register and normalization, not whether the claims are true."
+      ],
+      "exclude_when": [
+        "The output's propositions are verified against external evidence; this archive does not do that verification.",
+        "The output merely uses a genre without presenting its premise as ordinary fact."
+      ]
+    },
+    {
+      "id": "rhetorical_amplification",
+      "label": "Rhetorical amplification",
+      "color": "#ff8b9c",
+      "definition": "The continuation heightens a prompt's emotional register, certainty, scale, urgency, or repeated emphasis beyond the seed passage.",
+      "include_when": [
+        "The change in intensity can be compared with the prompt or earlier continuation.",
+        "Amplification is visible in diction, repetition, escalation, or accumulation."
+      ],
+      "exclude_when": [
+        "The tone is simply intense throughout with no observable increase.",
+        "Repetition is the main phenomenon and does not heighten rhetoric; consider recursive_degeneration."
+      ]
+    },
+    {
+      "id": "recursive_degeneration",
+      "label": "Recursive degeneration",
+      "color": "#ffc66d",
+      "definition": "An observable echo, loop, or self-reproduction in which the continuation repeats prompt/output material or reproduces a procedural pattern while adding little new information.",
+      "include_when": [
+        "Repeated spans, copied setup, or repeated instructions are directly visible in the record.",
+        "The annotation describes textual recurrence; it does not claim to know the model's internal decoding process."
+      ],
+      "exclude_when": [
+        "A deliberate refrain develops new meaning or structure.",
+        "Repetition is only a stylistic choice with no evident loss of informational movement."
+      ]
+    },
+    {
+      "id": "lexical_disintegration",
+      "label": "Lexical disintegration",
+      "color": "#d2a4ff",
+      "definition": "A fall in recoverable word-level structure marked by malformed or fused forms, script/punctuation collisions, or word-like fragments that resist stable parsing.",
+      "include_when": [
+        "The text's surface form makes ordinary lexical segmentation difficult.",
+        "Evidence is visible in the completion itself, not inferred from a high temperature or low score."
+      ],
+      "exclude_when": [
+        "The text is multilingual or uses specialist terms but remains intelligible.",
+        "A crude lexical-diversity statistic alone is the only evidence."
+      ]
+    }
+  ],
+  "guidance": {
+    "multi_label": "Terms are not mutually exclusive. Add every label supported by a textual observation; record a separate rationale for ambiguous boundary cases.",
+    "causality": "Labels characterize the recorded text. They do not attribute an effect to a sampling parameter unless a controlled comparison supports that claim.",
+    "provenance": "Every annotation records an annotator, method, timestamp, review status, and optional evidence spans. Initial seed annotations are AI-assisted and unreviewed.",
+    "measurement": "Token counts and log probabilities are copied from the export. Any derived lexical measure must name its tokenizer and limitations."
+  }
+}
