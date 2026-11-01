@@ -1,0 +1,94 @@
+{
+  "definitions": {
+    "lexical_subset": "completed runs with at least 3 Unicode word tokens",
+    "quartiles": "nearest-rank: sorted value at ceil(p*n)-1",
+    "unit": "unique generation ID"
+  },
+  "generation_count": 135,
+  "models": {
+    "arcee-ai/Trinity-Large-TrueBase": {
+      "linguistic": {
+        "prompt_overlap": {
+          "max": 0.6428571428571429,
+          "median": 0.11767610269914416,
+          "min": 0.0,
+          "n": 42,
+          "q1": 0.03550295857988166,
+          "q3": 0.21052631578947367
+        },
+        "repeated_trigrams": {
+          "max": 0.11904761904761907,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 42,
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "ttr": {
+          "max": 1.0,
+          "median": 0.862781954887218,
+          "min": 0.5857988165680473,
+          "n": 42,
+          "q1": 0.7869822485207101,
+          "q3": 0.951048951048951
+        }
+      },
+      "runs": 62,
+      "statuses": {
+        "cancelled": 20,
+        "completed": 42
+      }
+    },
+    "meta-llama/Llama-3.1-8B": {
+      "linguistic": {
+        "prompt_overlap": {
+          "max": 1.0,
+          "median": 0.13407761828814463,
+          "min": 0.0,
+          "n": 66,
+          "q1": 0.03731343283582089,
+          "q3": 0.34806629834254144
+        },
+        "repeated_trigrams": {
+          "max": 0.9444444444444444,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 66,
+          "q1": 0.0,
+          "q3": 0.005780346820809301
+        },
+        "ttr": {
+          "max": 1.0,
+          "median": 0.8945770734719078,
+          "min": 0.054945054945054944,
+          "n": 66,
+          "q1": 0.7628205128205128,
+          "q3": 0.9672131147540983
+        }
+      },
+      "runs": 73,
+      "statuses": {
+        "cancelled": 5,
+        "completed": 68
+      }
+    }
+  },
+  "temperature_coverage": {
+    "arcee-ai/Trinity-Large-TrueBase": {
+      "0.1\u2013<1": 10,
+      "1.0": 8,
+      "< 0.1": 0,
+      "> 2": 11,
+      ">1\u20132": 33,
+      "Missing": 0
+    },
+    "meta-llama/Llama-3.1-8B": {
+      "0.1\u2013<1": 13,
+      "1.0": 14,
+      "< 0.1": 3,
+      "> 2": 4,
+      ">1\u20132": 39,
+      "Missing": 0
+    }
+  }
+}
