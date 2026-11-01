@@ -6,15 +6,15 @@
 
 > We keep the strange output, the settings that accompanied it, and the limits of what we can claim. We do not turn a sampling trace into a causal story without controls.
 
-```text
-┌──────────────────────────────────────────────────────────┐
-│ FIELD ARCHIVE / 01          ACS RESEARCH WORKBENCH        │
-│                                                          │
-│   OBSERVE  →  PRESERVE  →  COMPARE  →  ANNOTATE           │
-│                                                          │
-│   No generated folklore. Only what the export records.   │
-└──────────────────────────────────────────────────────────┘
-```
+**RESEARCH MAP** · 🔵 Model observations · 🟣 Linguistic structure · 🟢 Completed records · 🟠 Cancellation & caveats
+
+| Explore | Research layer | Entry point |
+|:--|:--|:--|
+| 🔵 **Observe** | Model coverage, sampling design, provenance | [Visual research dashboard](#visual-research-dashboard) |
+| 🟣 **Interpret** | Lexical structure, repetition, anomaly boundaries | [Chart methods](docs/visual-analysis.md) · [Working taxonomy](docs/taxonomy-and-annotation.md) |
+| 🟢 **Reproduce** | Canonical corpus, validators, figure generator | [Start here](#start-here) · [Repository map](#repository-map) |
+| 🟠 **Review** | Confounds, privacy, annotation uncertainty | [Research integrity](#research-integrity-and-release-warning) |
+
 
 [Open the Anomaly Atlas](https://zazieproductions.github.io/A-taxonomy-of-generative-anomalies/) · [Cross-experiment analysis](docs/corpus-analysis.md) · [Data model](docs/data-model.md) · [Working taxonomy](docs/taxonomy-and-annotation.md) · [Contributing](CONTRIBUTING.md)
 
@@ -29,6 +29,46 @@
 *Pairs match the exact prompt and recorded non-model configuration within an experiment, excluding the model identifiers and seed. **Every pair has different recorded seeds**; this is descriptive comparison, not a same-seed benchmark. One pair contains a cancelled run.
 
 Three supplied `.jsonl` exports resolve to **two Workbench experiment IDs**. The identity and repetition filenames are successive exports of the same experiment: 112 run IDs recur unchanged in the later export, which adds six. The pipeline removes those 112 repeated appearances by original run ID, not by completion text. It reports zero conflicting duplicate records in this snapshot.
+
+## Visual research dashboard
+
+**Recorded observations, not a leaderboard.** These figures are generated from the checked-in canonical corpus: **135 unique generations · 2 model identifiers · 2 experiments**. They describe the 30 October snapshot, not every raw file subsequently added to the repository. Colors identify models consistently: **cyan = Trinity-Large-TrueBase**, **violet = Llama-3.1-8B**. Status colors are separate: **green = completed**, **amber = cancelled**.
+
+### 01 / Model & sampling structure
+
+![Model coverage: Trinity has 42 completed and 20 cancelled runs; Llama has 68 completed and 5 cancelled runs.](docs/figures/model-coverage.svg)
+
+![Temperature coverage matrix with exact counts by model and temperature band.](docs/figures/sampling-matrix.svg)
+
+**Reading:** coverage is uneven across models and temperatures. Cancellation counts describe the archive—not a measured model failure rate. Seeds, prompts, penalties and sampling filters differ.
+
+### 02 / Linguistic structure & repetition
+
+![Lexical variety versus completion word count for 108 completed texts, colored by model.](docs/figures/lexical-landscape.svg)
+
+![Distribution plots of lexical variety, repeated trigram fraction, and prompt-word overlap by model.](docs/figures/linguistic-fingerprints.svg)
+
+**Reading:** the archive includes both lexically varied continuations and a pronounced repetition tail. Median repeated-trigram fraction is zero for both models; the observed maxima are **0.119 for Trinity** and **0.944 for Llama**. These are descriptive text heuristics, **not coherence, intelligence, clinical, or anomaly diagnoses**. Length and prompt composition affect these distributions.
+
+**Audit the figures:** [Methods, exclusions & interpretation](docs/visual-analysis.md) · [Exact aggregate values](docs/figures/summary.json) · [Generator](anomaly_archive/visualize.py)
+
+Regenerate without third-party dependencies:
+
+```sh
+python -m anomaly_archive.visualize
+```
+
+## Repository map
+
+| Layer | Location | Purpose |
+|:--|:--|:--|
+| 🔵 Source evidence | Root `*.jsonl` files | Unmodified supplied exports; may extend beyond the canonical snapshot |
+| 🔵 Canonical data | [`data/normalized/`](data/normalized/) | Deduplicated generations and provenance |
+| 🟣 Research & interpretation | [`docs/research-notebooks/`](docs/research-notebooks/) | Experiment notebooks and limitations |
+| 🟣 Visual analysis | [`docs/figures/`](docs/figures/) · [`docs/visual-analysis.md`](docs/visual-analysis.md) | Reproducible SVG figures, aggregate statistics, methods |
+| 🟢 Research tooling | [`anomaly_archive/`](anomaly_archive/) | Ingest, validate, publish, visualize |
+| 🟢 Quality controls | [`tests/`](tests/) · [`schemas/`](schemas/) | Regression tests and data contracts |
+| 🟠 Review & publication | [`docs/data/`](docs/data/) · [`CONTRIBUTING.md`](CONTRIBUTING.md) | Public projection, provisional annotations and review protocol |
 
 ## Start here
 

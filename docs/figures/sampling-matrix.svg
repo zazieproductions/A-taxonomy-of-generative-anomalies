@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="390" viewBox="0 0 1000 390" role="img" aria-labelledby="title desc">
+<title id="title">02 / Sampling coverage matrix</title><desc id="desc">Recorded temperature × model • cell labels are run counts; darker = fewer observations</desc>
+<rect width="1000" height="390" rx="18" fill="#0b1220"/>
+<text x="32" y="40" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="24" text-anchor="start">02 / Sampling coverage matrix</text>
+<text x="32" y="68" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">Recorded temperature × model • cell labels are run counts; darker = fewer observations</text>
+<text x="365" y="115" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">&lt; 0.1</text>
+<text x="470" y="115" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">0.1–&lt;1</text>
+<text x="575" y="115" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">1.0</text>
+<text x="680" y="115" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">&gt;1–2</text>
+<text x="785" y="115" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">&gt; 2</text>
+<text x="890" y="115" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Missing</text>
+<text x="32" y="170" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">arcee-ai/Trinity-Large-TrueBase</text>
+<rect x="320" y="135" width="92" height="56" rx="4" fill="#38bdf8" opacity="0.08"/>
+<text x="366" y="169" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">0</text>
+<rect x="425" y="135" width="92" height="56" rx="4" fill="#38bdf8" opacity="0.28512820512820514"/>
+<text x="471" y="169" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">10</text>
+<rect x="530" y="135" width="92" height="56" rx="4" fill="#38bdf8" opacity="0.2441025641025641"/>
+<text x="576" y="169" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">8</text>
+<rect x="635" y="135" width="92" height="56" rx="4" fill="#38bdf8" opacity="0.7569230769230769"/>
+<text x="681" y="169" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">33</text>
+<rect x="740" y="135" width="92" height="56" rx="4" fill="#38bdf8" opacity="0.3056410256410257"/>
+<text x="786" y="169" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">11</text>
+<rect x="845" y="135" width="92" height="56" rx="4" fill="#38bdf8" opacity="0.08"/>
+<text x="891" y="169" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">0</text>
+<text x="32" y="245" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">meta-llama/Llama-3.1-8B</text>
+<rect x="320" y="210" width="92" height="56" rx="4" fill="#c4b5fd" opacity="0.14153846153846156"/>
+<text x="366" y="244" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">3</text>
+<rect x="425" y="210" width="92" height="56" rx="4" fill="#c4b5fd" opacity="0.3466666666666667"/>
+<text x="471" y="244" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">13</text>
+<rect x="530" y="210" width="92" height="56" rx="4" fill="#c4b5fd" opacity="0.36717948717948723"/>
+<text x="576" y="244" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">14</text>
+<rect x="635" y="210" width="92" height="56" rx="4" fill="#c4b5fd" opacity="0.88"/>
+<text x="681" y="244" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">39</text>
+<rect x="740" y="210" width="92" height="56" rx="4" fill="#c4b5fd" opacity="0.16205128205128205"/>
+<text x="786" y="244" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">4</text>
+<rect x="845" y="210" width="92" height="56" rx="4" fill="#c4b5fd" opacity="0.08"/>
+<text x="891" y="244" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">0</text>
+<text x="32" y="325" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">Prompts, seeds, penalties and candidate filters co-vary. No isolated temperature effect.</text>
+<text x="32" y="370" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="start">ACS / GENERATIVE ANOMALIES     •     Observational archive · not a model benchmark</text>
+</svg>

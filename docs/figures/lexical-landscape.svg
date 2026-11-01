@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+<title id="title">03 / Lexical variety across completion length</title><desc id="desc">Completed text only · ≥3 Unicode word tokens · n=108 · each point is one generation</desc>
+<rect width="1000" height="560" rx="18" fill="#0b1220"/>
+<text x="32" y="40" fill="#eef2ff" font-family="system-ui, sans-serif" font-size="24" text-anchor="start">03 / Lexical variety across completion length</text>
+<text x="32" y="68" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">Completed text only · ≥3 Unicode word tokens · n=108 · each point is one generation</text>
+<rect x="95" y="420.0" width="840" height="1" rx="4" fill="#26354b" opacity="1"/>
+<text x="78" y="424.0" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="end">0.0</text>
+<text x="95.0" y="445" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">0</text>
+<rect x="95" y="362.0" width="840" height="1" rx="4" fill="#26354b" opacity="1"/>
+<text x="78" y="366.0" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="end">0.2</text>
+<text x="263.0" y="445" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">39</text>
+<rect x="95" y="304.0" width="840" height="1" rx="4" fill="#26354b" opacity="1"/>
+<text x="78" y="308.0" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="end">0.4</text>
+<text x="431.0" y="445" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">77</text>
+<rect x="95" y="246.0" width="840" height="1" rx="4" fill="#26354b" opacity="1"/>
+<text x="78" y="250.0" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="end">0.6</text>
+<text x="599.0" y="445" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">116</text>
+<rect x="95" y="188.0" width="840" height="1" rx="4" fill="#26354b" opacity="1"/>
+<text x="78" y="192.0" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="end">0.8</text>
+<text x="767.0" y="445" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">154</text>
+<rect x="95" y="130.0" width="840" height="1" rx="4" fill="#26354b" opacity="1"/>
+<text x="78" y="134.0" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="end">1.0</text>
+<text x="935.0" y="445" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">193</text>
+<text x="95" y="108" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">Type-token ratio (unique forms / words)</text>
+<text x="515" y="472" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Completion length / Unicode word tokens (not model tokens)</text>
+<circle cx="447.54" cy="155.06" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 81 words | TTR 0.914</title></circle>
+<circle cx="551.99" cy="190.76" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 105 words | TTR 0.790</title></circle>
+<circle cx="151.58" cy="130.00" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 13 words | TTR 1.000</title></circle>
+<circle cx="630.34" cy="134.72" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 123 words | TTR 0.984</title></circle>
+<circle cx="861.01" cy="139.89" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 176 words | TTR 0.966</title></circle>
+<circle cx="652.10" cy="234.22" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 128 words | TTR 0.641</title></circle>
+<circle cx="900.18" cy="313.41" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 185 words | TTR 0.368</title></circle>
+<circle cx="882.77" cy="149.23" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 181 words | TTR 0.934</title></circle>
+<circle cx="643.39" cy="134.60" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 126 words | TTR 0.984</title></circle>
+<circle cx="634.69" cy="134.68" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 124 words | TTR 0.984</title></circle>
+<circle cx="678.21" cy="136.49" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 134 words | TTR 0.978</title></circle>
+<circle cx="599.87" cy="152.50" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 116 words | TTR 0.922</title></circle>
+<circle cx="499.77" cy="130.00" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 93 words | TTR 1.000</title></circle>
+<circle cx="726.09" cy="186.00" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 145 words | TTR 0.807</title></circle>
+<circle cx="534.59" cy="382.67" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 101 words | TTR 0.129</title></circle>
+<circle cx="395.31" cy="193.04" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 69 words | TTR 0.783</title></circle>
+<circle cx="730.44" cy="199.52" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 146 words | TTR 0.760</title></circle>
+<circle cx="869.72" cy="147.92" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 178 words | TTR 0.938</title></circle>
+<circle cx="508.47" cy="136.11" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 95 words | TTR 0.979</title></circle>
+<circle cx="586.81" cy="160.80" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 113 words | TTR 0.894</title></circle>
+<circle cx="565.05" cy="181.02" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 108 words | TTR 0.824</title></circle>
+<circle cx="612.93" cy="130.00" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 119 words | TTR 1.000</title></circle>
+<circle cx="882.77" cy="335.08" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 181 words | TTR 0.293</title></circle>
+<circle cx="935.00" cy="181.09" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 193 words | TTR 0.824</title></circle>
+<circle cx="887.12" cy="404.07" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 182 words | TTR 0.055</title></circle>
+<circle cx="765.26" cy="218.51" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 154 words | TTR 0.695</title></circle>
+<circle cx="795.73" cy="171.43" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 161 words | TTR 0.857</title></circle>
+<circle cx="795.73" cy="157.02" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 161 words | TTR 0.907</title></circle>
+<circle cx="691.27" cy="130.00" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 137 words | TTR 1.000</title></circle>
+<circle cx="691.27" cy="132.12" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 137 words | TTR 0.993</title></circle>
+<circle cx="787.02" cy="179.25" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 159 words | TTR 0.830</title></circle>
+<circle cx="843.60" cy="135.06" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 172 words | TTR 0.983</title></circle>
+<circle cx="364.84" cy="148.71" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 62 words | TTR 0.935</title></circle>
+<circle cx="821.84" cy="246.35" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 167 words | TTR 0.599</title></circle>
+<circle cx="752.20" cy="133.84" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 151 words | TTR 0.987</title></circle>
+<circle cx="625.98" cy="141.89" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 122 words | TTR 0.959</title></circle>
+<circle cx="804.43" cy="194.05" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 163 words | TTR 0.779</title></circle>
+<circle cx="643.39" cy="196.75" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 126 words | TTR 0.770</title></circle>
+<circle cx="856.66" cy="226.11" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 175 words | TTR 0.669</title></circle>
+<circle cx="617.28" cy="146.92" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 120 words | TTR 0.942</title></circle>
+<circle cx="830.54" cy="250.12" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 169 words | TTR 0.586</title></circle>
+<circle cx="630.34" cy="313.90" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 123 words | TTR 0.366</title></circle>
+<circle cx="773.96" cy="198.78" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 156 words | TTR 0.763</title></circle>
+<circle cx="538.94" cy="132.84" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 102 words | TTR 0.990</title></circle>
+<circle cx="382.25" cy="178.33" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 66 words | TTR 0.833</title></circle>
+<circle cx="721.74" cy="182.36" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 144 words | TTR 0.819</title></circle>
+<circle cx="547.64" cy="222.02" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 104 words | TTR 0.683</title></circle>
+<circle cx="608.58" cy="134.92" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 118 words | TTR 0.983</title></circle>
+<circle cx="747.85" cy="149.33" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 150 words | TTR 0.933</title></circle>
+<circle cx="713.03" cy="154.51" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 142 words | TTR 0.915</title></circle>
+<circle cx="669.51" cy="198.11" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 132 words | TTR 0.765</title></circle>
+<circle cx="708.68" cy="179.36" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 141 words | TTR 0.830</title></circle>
+<circle cx="795.73" cy="216.46" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 161 words | TTR 0.702</title></circle>
+<circle cx="469.30" cy="160.35" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 86 words | TTR 0.895</title></circle>
+<circle cx="138.52" cy="130.00" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 10 words | TTR 1.000</title></circle>
+<circle cx="434.48" cy="200.64" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 78 words | TTR 0.756</title></circle>
+<circle cx="699.97" cy="144.60" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 139 words | TTR 0.950</title></circle>
+<circle cx="686.92" cy="144.93" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 136 words | TTR 0.949</title></circle>
+<circle cx="699.97" cy="221.80" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 139 words | TTR 0.683</title></circle>
+<circle cx="804.43" cy="130.00" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 163 words | TTR 1.000</title></circle>
+<circle cx="665.16" cy="183.13" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 131 words | TTR 0.817</title></circle>
+<circle cx="739.15" cy="169.19" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 148 words | TTR 0.865</title></circle>
+<circle cx="856.66" cy="242.69" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 175 words | TTR 0.611</title></circle>
+<circle cx="756.55" cy="187.24" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 152 words | TTR 0.803</title></circle>
+<circle cx="773.96" cy="131.86" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 156 words | TTR 0.994</title></circle>
+<circle cx="699.97" cy="138.35" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 139 words | TTR 0.971</title></circle>
+<circle cx="412.72" cy="213.42" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 73 words | TTR 0.712</title></circle>
+<circle cx="800.08" cy="146.11" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 162 words | TTR 0.944</title></circle>
+<circle cx="830.54" cy="210.65" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 169 words | TTR 0.722</title></circle>
+<circle cx="221.22" cy="270.00" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 29 words | TTR 0.517</title></circle>
+<circle cx="730.44" cy="149.86" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 146 words | TTR 0.932</title></circle>
+<circle cx="747.85" cy="166.73" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 150 words | TTR 0.873</title></circle>
+<circle cx="852.31" cy="166.67" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 174 words | TTR 0.874</title></circle>
+<circle cx="625.98" cy="139.51" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 122 words | TTR 0.967</title></circle>
+<circle cx="678.21" cy="149.48" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 134 words | TTR 0.933</title></circle>
+<circle cx="813.13" cy="231.94" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 165 words | TTR 0.648</title></circle>
+<circle cx="717.38" cy="190.84" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 143 words | TTR 0.790</title></circle>
+<circle cx="817.49" cy="381.57" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 166 words | TTR 0.133</title></circle>
+<circle cx="408.37" cy="142.08" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 72 words | TTR 0.958</title></circle>
+<circle cx="591.17" cy="137.63" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 114 words | TTR 0.974</title></circle>
+<circle cx="830.54" cy="148.88" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 169 words | TTR 0.935</title></circle>
+<circle cx="826.19" cy="180.06" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 168 words | TTR 0.827</title></circle>
+<circle cx="730.44" cy="195.55" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 146 words | TTR 0.774</title></circle>
+<circle cx="325.67" cy="140.94" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 53 words | TTR 0.962</title></circle>
+<circle cx="656.45" cy="130.00" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 129 words | TTR 1.000</title></circle>
+<circle cx="673.86" cy="171.43" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 133 words | TTR 0.857</title></circle>
+<circle cx="760.91" cy="135.69" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 153 words | TTR 0.980</title></circle>
+<circle cx="756.55" cy="170.07" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 152 words | TTR 0.862</title></circle>
+<circle cx="734.79" cy="204.97" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 147 words | TTR 0.741</title></circle>
+<circle cx="334.38" cy="135.27" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 55 words | TTR 0.982</title></circle>
+<circle cx="578.11" cy="130.00" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 111 words | TTR 1.000</title></circle>
+<circle cx="482.36" cy="195.17" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 89 words | TTR 0.775</title></circle>
+<circle cx="921.94" cy="168.16" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 190 words | TTR 0.868</title></circle>
+<circle cx="578.11" cy="140.45" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 111 words | TTR 0.964</title></circle>
+<circle cx="782.67" cy="148.35" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 158 words | TTR 0.937</title></circle>
+<circle cx="530.23" cy="156.10" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 100 words | TTR 0.910</title></circle>
+<circle cx="717.38" cy="144.20" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 143 words | TTR 0.951</title></circle>
+<circle cx="769.61" cy="173.03" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 155 words | TTR 0.852</title></circle>
+<circle cx="760.91" cy="370.72" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 153 words | TTR 0.170</title></circle>
+<circle cx="717.38" cy="211.12" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 143 words | TTR 0.720</title></circle>
+<circle cx="447.54" cy="155.06" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 81 words | TTR 0.914</title></circle>
+<circle cx="830.54" cy="191.78" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 169 words | TTR 0.787</title></circle>
+<circle cx="800.08" cy="180.12" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 162 words | TTR 0.827</title></circle>
+<circle cx="743.50" cy="176.71" r="4.5" fill="#38bdf8" fill-opacity="0.65"><title>arcee-ai/Trinity-Large-TrueBase | 149 words | TTR 0.839</title></circle>
+<circle cx="456.24" cy="192.89" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 83 words | TTR 0.783</title></circle>
+<circle cx="778.32" cy="135.54" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 157 words | TTR 0.981</title></circle>
+<circle cx="525.88" cy="138.79" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 99 words | TTR 0.970</title></circle>
+<circle cx="782.67" cy="170.38" r="4.5" fill="#c4b5fd" fill-opacity="0.65"><title>meta-llama/Llama-3.1-8B | 158 words | TTR 0.861</title></circle>
+<text x="95" y="505" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">arcee-ai/Trinity-Large-TrueBase</text>
+<text x="540" y="505" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">meta-llama/Llama-3.1-8B</text>
+<text x="32" y="540" fill="#a9b8ce" font-family="system-ui, sans-serif" font-size="12" text-anchor="start">ACS / GENERATIVE ANOMALIES     •     Observational archive · not a model benchmark</text>
+</svg>
